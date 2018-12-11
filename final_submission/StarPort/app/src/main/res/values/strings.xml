@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StarPort</string>
+    <string name="weather_tmp">21 *C</string>
+    <string name="weather_hmd">Humidity: 30 %</string>
+    <string name="weather_prs">Pressure: 1000.24 hPa</string>
+    <string name="weather_time">Last reported Monday December 10, 2018 3:30PM</string>
+    <string name="select_mode">Select a mode</string>
+</resources>

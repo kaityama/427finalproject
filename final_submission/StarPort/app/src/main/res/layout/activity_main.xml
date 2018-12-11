@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+
+    <!-- Weather Dashboard -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blockGray"
+        android:padding="8dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/temp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_tmp"
+                android:textSize="28sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="4">
+            <TextView
+                android:id="@+id/humidity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_hmd"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/pressure_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_prs"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Last reported blurb -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dp">
+        <TextView
+            android:id="@+id/updated_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/weather_time"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+    <!-- Power On/Off Buttons -->
+    <ImageView
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_lock_power_off"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:id="@+id/power_off"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="OFF"/>
+        <Button
+            android:id="@+id/power_on"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ON"/>
+    </LinearLayout>
+
+    <!-- Select Mode Text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_mode"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
+        />
+
+    <!-- Mode Selection Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="24dp">
+            <Button
+                android:id="@+id/warm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/warm_button_background"
+                android:text="WARM"
+                android:textAlignment="center"
+                android:paddingTop="3dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/cool_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="COOL"
+                android:textAlignment="center"
+                android:background="@drawable/cool_button_background"
+                android:paddingTop="3dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="24dp">
+            <Button
+                android:id="@+id/idle_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IDLE"
+                android:background="@drawable/idle_button_background"
+                android:textAlignment="center"
+                android:paddingTop="3dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- Energy Saver Buttons -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_lock_idle_low_battery"
+        android:paddingTop="6dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:id="@+id/energy_off"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="OFF"/>
+        <Button
+            android:id="@+id/energy_on"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ON"/>
+    </LinearLayout>
+
+    <!-- Lock Out Buttons -->
+    <ImageView
+        android:id="@+id/lock_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_lock_idle_lock"
+        android:paddingTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:id="@+id/lock_off"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="OFF"/>
+        <Button
+            android:id="@+id/lock_on"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ON"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/pressed_round_button"/> <!-- pressed -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/pressed_round_button"/> <!-- focused -->
+    <item android:drawable="@drawable/round_button_cool"/> <!-- default -->
+</selector>
